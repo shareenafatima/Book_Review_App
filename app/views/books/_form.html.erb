@@ -8,7 +8,10 @@
     <%= f.input :description %>
     <%= f.input :author %>
     <%= f.input :publication_year %>
-    <%= f.input :category %>
+    <div class="field">
+    <%= f.label :category, class:"title" %>
+    <%= f.select :category, Book::CATEGORY, prompt: "Select category" %>
+  </div>
   </div>
 
   <div class="form-actions">
