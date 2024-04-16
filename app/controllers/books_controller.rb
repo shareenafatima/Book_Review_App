@@ -63,10 +63,6 @@ class BooksController < ApplicationController
       @book = Book.find(params[:id])
     end
 
-    def authorize_user!
-      redirect_to root_path, alert: 'You are not authorized to perform this action.' unless current_user == @book.user
-    end
-
     # Only allow a list of trusted parameters through.
     def book_params
       params.require(:book).permit(:title, :description, :author, :publication_year, :category)
