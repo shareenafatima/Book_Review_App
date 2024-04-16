@@ -1,9 +1,9 @@
 class BooksController < ApplicationController
   before_action :set_book, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_user!, except: %i[index show]
   # GET /books or /books.json
   def index
-    @books = Book.all
+    @books = Book.all.order("created_at desc")
   end
 
   # GET /books/1 or /books/1.json
@@ -12,7 +12,7 @@ class BooksController < ApplicationController
 
   # GET /books/new
   def new
-    @book = Book.new
+    @book = current_user.books.build
   end
 
   # GET /books/1/edit
@@ -21,7 +21,7 @@ class BooksController < ApplicationController
 
   # POST /books or /books.json
   def create
-    @book = Book.new(book_params)
+    @book = current_user.books.build(book_params)
 
     respond_to do |format|
       if @book.save
@@ -61,6 +61,10 @@ class BooksController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_book
       @book = Book.find(params[:id])
+    end
+
+    def authorize_user!
+      redirect_to root_path, alert: 'You are not authorized to perform this action.' unless current_user == @book.user
     end
 
     # Only allow a list of trusted parameters through.
