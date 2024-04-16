@@ -1,9 +1,10 @@
 
 <%= render @book %>
 
-<% if current_user == @book.author %>
-  <%= link_to "Edit", edit_book_path(@book) %>
-  <%= button_to "Destroy", @book, method: :delete %>
+<% if book_author(@book) %>
+<%= link_to 'Edit', edit_book_path(@book), class:'button' %>
+
+ <%= button_to "Destroy this book", @book, method: :delete, class:'button' %>
 <% end %>
 
 
