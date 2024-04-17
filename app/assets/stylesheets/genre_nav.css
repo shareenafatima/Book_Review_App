@@ -34,3 +34,55 @@ li{
 .category_nav a:active {
 background: #ffb703;
 }
+
+#books {
+    padding: 15px;
+    margin: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+  
+  .book {
+    margin: 15px;
+    width: 250px;
+    margin-bottom: 20px; 
+  }
+
+  .book img {
+    width: 250px;
+  height: 350px;
+  box-shadow: -5px 0 8px -5px rgba(0, 0, 0, 0.5), 5px 0 5px -5px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.5s ease;
+  border: 2px solid grey;
+  border-radius: 20px ;
+  }
+
+  .book-image:hover {
+    opacity: 0.7;
+  }
+
+  .heading{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: fantasy;
+    font-size: 60px;
+    background: #ffb703;
+  }
+
+  .heading1{
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 60px;
+    background: #ffb703;
+  }
+
+  .message{
+    padding: 30px;
+    text-align: center;
+    color: green;
+    font-size: 30px;
+    font-family: cursive;
+  }

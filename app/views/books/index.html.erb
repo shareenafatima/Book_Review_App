@@ -1,14 +1,21 @@
-<h1><%= params[:category] %></h1>
-<% if @books.count == 0 %>
-<h2> There are currently no books in this category. You can add if you'd like.</h2>
-<% else %>
-<div id="books">
-  <% @books.each do |book| %>
-  <%= image_tag book.image if book.image.attached? %>
-    <h2> <%= link_to book.title, book_path(book) %> </h2>
-  <% end %>
-  <% end %>
+<div class = "heading"><%= params[:category] %></div>
+<% if params[:controller] == 'books' && params[:action] == 'index' %>
+  <h1 class="heading1">Discover Your Next Favorite Read</h1>
+<% end %>
 
-</div>
+<% if @books.count == 0 %>
+  <div class = "message">There are currently no books in this category. You can add if you'd like.</div>
+<% else %>
+  <div id="books">
+ 
+    <% @books.each do |book| %>
+      <div class="book">
+        <%= link_to book_path(book) do %>
+          <%= image_tag book.image, class: "book-image" if book.image.attached? %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
 
 <%= link_to "New book", new_book_path %>
