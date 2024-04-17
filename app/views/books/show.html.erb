@@ -2,6 +2,8 @@
 <%= render @book %>
 
 <% if book_author(@book) %>
+<%= image_tag @book.image if @book.image.attached? %>
+
 <%= link_to 'Edit', edit_book_path(@book), class:'button' %>
 
  <%= button_to "Destroy this book", @book, method: :delete, class:'button' %>

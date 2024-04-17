@@ -11,8 +11,12 @@
     <div class="field">
     <%= f.label :category_id, class:"title" %>
     <%= f.select :category_id, Category.all.map { |c| [c.name, c.id] }, prompt: "Select category" %>
-  
   </div>
+  </div>
+
+<div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
   </div>
 
   <div class="form-actions">

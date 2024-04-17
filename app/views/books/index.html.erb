@@ -4,6 +4,7 @@
 <% else %>
 <div id="books">
   <% @books.each do |book| %>
+  <%= image_tag book.image if book.image.attached? %>
     <h2> <%= link_to book.title, book_path(book) %> </h2>
   <% end %>
   <% end %>
