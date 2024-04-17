@@ -1,12 +1,13 @@
-<h1>Books</h1>
-
+<h1><%= params[:category] %></h1>
+<% if @books.count == 0 %>
+<h2> There are currently no books in this category. You can add if you'd like.</h2>
+<% else %>
 <div id="books">
   <% @books.each do |book| %>
-    <%= render book %>
-    <p>
-      <%= link_to "Show this book", book %>
-    </p>
+    <h2> <%= link_to book.title, book_path(book) %> </h2>
   <% end %>
+  <% end %>
+
 </div>
 
 <%= link_to "New book", new_book_path %>

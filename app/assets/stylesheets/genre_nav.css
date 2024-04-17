@@ -31,7 +31,6 @@ li{
  background: #ffb703;
  transition: 0.5s;
 }
-
-a:active{
-    background: #ffb703;
+.category_nav a:active {
+background: #ffb703;
 }
