@@ -1,4 +1,5 @@
 class Book < ApplicationRecord
+  has_many :reviews
   belongs_to :user, optional: true
   belongs_to :category
   has_one_attached :image
