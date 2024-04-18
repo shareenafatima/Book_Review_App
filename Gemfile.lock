@@ -324,6 +324,7 @@ DEPENDENCIES
   devise
   gravatar_image_tag (~> 1.2)
   guard (~> 2.16)
+  image_processing (~> 1.2)
   importmap-rails
   jbuilder
   livereload (~> 1.6)

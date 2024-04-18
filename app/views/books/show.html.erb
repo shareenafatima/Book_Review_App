@@ -1,11 +1,28 @@
+<div class="container pt-5" >
+<div class="row">
 
-<%= render @book %>
-<%= image_tag @book.image if @book.image.attached? %>
+<div class="col-md-4">
+
+<%= image_tag @book.image, class: "book-image" if @book.image.attached? %>
+</div>
+
+<div class="col-md-8">
+<h2 class="book-title"> <%= @book.title %></h2>
+<h3 class="book-author"> <%= @book.author %></h3>
+<h4 class="book-category">Category: <%= @book.category.name %></h4>
+<p class="book-description"> <%= @book.description %></p>
+</div>
+
+</div>
+
+<%= link_to "Back", root_path %>
+
 <% if book_author(@book) %>
 <%= link_to 'Edit', edit_book_path(@book), class:'button' %>
 
  <%= button_to "Destroy this book", @book, method: :delete, class:'button' %>
 <% end %>
+</div>
 
 
 
