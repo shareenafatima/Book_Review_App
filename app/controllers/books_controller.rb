@@ -15,6 +15,8 @@ end
   def show
     @book = Book.find(params[:id])
     @review = @book.reviews.find_by(id: params[:review_id])
+    @average_rating = @book.reviews.average(:rating)
+
   end
   # GET /books/1 or /books/1.json
   # def show

@@ -105,7 +105,62 @@ background: #ffb703;
   }
 
   .book-image {
-    height: 475px;
-    width: 325px;
+    height: 500px;
+    width: 375px;
   }
 
+  .average-rating {
+    font-size: 27px;
+    color: #FFA500;
+  }
+
+  .review-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .user-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .user-icon {
+    font-size: 30px;
+    margin: 12px 12px 12px 230px;
+  }
+  
+  .book-info-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .book-image-container {
+    margin-right: 20px;
+  }
+  .book-description {
+    flex: 1;
+  }
+
+
+  /* .book-image-container {
+    position: relative;
+    padding-bottom: 100%; 
+  }
+  
+  .book-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .book-description {
+    width: 100%;
+  } */

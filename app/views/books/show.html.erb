@@ -1,38 +1,50 @@
-<div class="container pt-5" >
-<div class="row">
+<div class="container pt-5">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="book-image-container">
+        <%= image_tag @book.image, class: "book-image" if @book.image.attached? %>
+      </div>
+    </div>
 
-<div class="col-md-4">
+    <div class="col-md-8">
+      <h2 class="book-title"><%= @book.title %></h2>
+      <h3 class="book-author"><%= @book.author %></h3>
+      <h4 class="book-category">Category: <%= @book.category.name %></h4>
+      <div class="book-description">
+        <%= @book.description %>
+      </div>
+      <h2>Average Rating:</h2>
+      <div class="average-rating">
+        <%= average_rating_stars(@average_rating) %> (<%= @average_rating.present? ? "%.2f" % @average_rating : "No reviews yet" %>)
+      </div>
+    </div>
+  </div>
 
-<%= image_tag @book.image, class: "book-image" if @book.image.attached? %>
+  <div class="row">
+    <div class="col-md-12">
+      <h1> Reviews </h1>
+      <% @book.reviews.each do |review| %>
+        <div class="review-container">
+          <% if review.user.present? %>
+            <div class="user-avatar">
+              <i class="fas fa-user-circle user-icon" style="color: green;"></i>
+              <p class="user-email"><strong><%= review.user.email %></strong></p>
+            </div>
+          <% end %>
+          <%= render partial: 'reviews/review', locals: { review: review } %>
+        </div>
+      <% end %>
+
+      <div>
+        <%= link_to "Add Review", new_book_review_path(@book) %>
+      </div>
+    </div>
+  </div>
+
+  <%= link_to "Back", root_path %>
+
+  <% if book_author(@book) %>
+    <%= link_to 'Edit', edit_book_path(@book), class: 'button' %>
+    <%= button_to "Destroy this book", @book, method: :delete, class: 'button' %>
+  <% end %>
 </div>
-
-<div class="col-md-8">
-<h2 class="book-title"> <%= @book.title %></h2>
-<h3 class="book-author"> <%= @book.author %></h3>
-<h4 class="book-category">Category: <%= @book.category.name %></h4>
-<p class="book-description"> <%= @book.description %></p>
-</div>
-
-</div>
-
-<div class="row">
-<div class= "col-md-4">
-<%= render @book.reviews %>
-<div>
-<%= link_to "Add Review", new_book_review_path(@book) %>
-</div>
-
-</div>
-</div>
-
-<%= link_to "Back", root_path %>
-
-<% if book_author(@book) %>
-<%= link_to 'Edit', edit_book_path(@book), class:'button' %>
-
- <%= button_to "Destroy this book", @book, method: :delete, class:'button' %>
-<% end %>
-</div>
-
-
-
