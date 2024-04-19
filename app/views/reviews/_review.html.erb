@@ -1,4 +1,9 @@
-<p> <%= review.rating %></p>
+<div class="rating">
+  <% review.rating.times do %>
+    <%= fa_icon "star" %>
+  <% end %>
+</div>
+
 <p><%= review.comment %></p>
 
 <%

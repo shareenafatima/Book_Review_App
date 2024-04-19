@@ -1,5 +1,9 @@
-<%= simple_form_for([@book, @book.reviews.build]) do |f| %>
-<%= f.input :rating %>
-<%= f.input :comment %>
-<%= f.button :submit %>
+<%= form_with(model: @review, url: book_reviews_path(@book), local: true) do |form| %>
+  <%= form.label :rating %>
+  <%= form.select :rating, options_for_select([1, 2, 3, 4, 5]) %>
+
+  <%= form.label :comment %>
+  <%= form.text_area :comment %>
+
+  <%= form.submit %>
 <% end %>
