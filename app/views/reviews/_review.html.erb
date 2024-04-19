@@ -1,5 +1,23 @@
 <p> <%= review.rating %></p>
 <p><%= review.comment %></p>
 
-<%= link_to "Edit", edit_book_review_path(review.book, review) %>
-<%= link_to "Delete", book_review_path(review.book, review), method: :delete %>
+<%
+=begin%>
+ <%= link_to "Edit", edit_book_review_path(review.book, review) %>
+<%= link_to "Delete", book_review_path(review.book, review), method: :delete %> 
+<%
+=end%>
+<% if user_signed_in? %>
+
+<% if review.user_id == current_user.id %>
+
+<%= link_to 'Edit', edit_book_review_path(review.book, review), class: 'button' %>
+
+<%= link_to 'Delete', book_review_path(@book, review), method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %>
+
+<% end %>
+<% end %>
+
+
+
+

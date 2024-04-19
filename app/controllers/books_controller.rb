@@ -11,9 +11,14 @@ else
 end
   end
 
-  # GET /books/1 or /books/1.json
+
   def show
+    @book = Book.find(params[:id])
+    @review = @book.reviews.find_by(id: params[:review_id])
   end
+  # GET /books/1 or /books/1.json
+  # def show
+  # end
 
   # GET /books/new
   def new
