@@ -148,6 +148,13 @@ background: #ffb703;
   }
 
 
+  @media (max-width: 1400px) {
+    .navbar-2 {
+      display: none;
+    }
+  }
+  
+
   /* .book-image-container {
     position: relative;
     padding-bottom: 100%; 
