@@ -40,13 +40,15 @@
       <li class="nav-item">
         <%= link_to "Add Book", new_book_path, class: "nav-link" %>
       </li>
+      <li class="nav-item">
        <% if user_signed_in? %>
-            <%= button_to "Account ", edit_user_registration_path,method: :get, class: "btn btn-dark mx-1  me-2" %> 
-            <%= button_to "log out  ", destroy_user_session_path, method: :delete, class: "btn btn-warning mx-1  me-2" %>
+            <%= button_to "Account", edit_user_registration_path,method: :get, class: "nav-link" %> 
+            <%= button_to "log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
       <%else%>
-             <%= link_to "sign up  ", new_user_registration_path, class: "btn btn-warning mx-1 me-2" %>
-             <%= link_to "login", new_user_session_path,class: "btn btn-dark mx-1  me-2" %>
+             <%= link_to "sign up", new_user_registration_path, class: "nav-link" %>
+             <%= link_to "login", new_user_session_path,class: "nav-link" %>
       <% end %> 
+      </li>
     </ul>
   </div>
 </nav>
