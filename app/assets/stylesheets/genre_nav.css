@@ -92,7 +92,7 @@ background: #ffb703;
     text-align: center;
     background: #70e000;
     color: white;
-    /* border: 2px solid #006400; */
+  
   }
 
   
@@ -154,34 +154,12 @@ background: #ffb703;
     }
   }
   
-
-  /* .book-image-container {
-    position: relative;
-    padding-bottom: 100%; 
-  }
-  
-  .book-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .book-description {
-    width: 100%;
-  } */
-
   #user-books {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
   }
   
-  .book {
-    /* flex: 0 0 calc(33.33% - 20px);  */
-    margin-bottom: 20px;
-  }
   
   .book-image {
     width: 100%; 
@@ -277,7 +255,46 @@ background: #ffb703;
   .form-actions {
     text-align: center;
     margin-top: 20px;
-    background: #FFA500;
-    border: 2px solid black;
+  }
+
+  .black-button-2{
+    background-color: #000;
+    color: #ccc;
+  }
+  
+  .button {
+    background-color: orange;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    opacity: 0.8;
+  }
+  
+  .orange-button {
+    background-color: orange;
+  }
+  
+  .black-button {
+    background-color: #000;
+  }
+  
+  .button-group {
+display: flex;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .button-group .button {
+    margin-right: 10px;
+  }
+  
+  .button-group .button:last-child {
+    margin-right: 0;
   }
   
