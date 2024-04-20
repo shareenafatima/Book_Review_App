@@ -1,27 +1,29 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <%= link_to "Book Review App",root_path,class:'navbar-brand' %>
+    <%= link_to "Book Review App", root_path, class: 'nav-link' %>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div  class="collapse navbar-collapse " id="navbarSupportedContent">
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-         <%= link_to "Home",root_path,class: "btn btn-outline-dark" %>
-          <a  href="#"></a>
+          <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
-
-      <li class="nav-item">
-        <%= link_to "User Profile", user_path(current_user), class: "nav-link" if current_user %>
-      </li>
-      
-        </ul>
+        <li class="nav-item">
+          <%= link_to "User Profile", user_path(current_user), class: "nav-link" if current_user %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Add Book", new_book_path, class: "nav-link" %>
+        </li>
+      </ul>
       <%= render 'users/session_manager' %>
-     
-    </div>
-     <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      
+      <%= form_with(url: books_path, method: "get", class: "d-flex navbar-nav ms-auto") do %>
+        <%= text_field_tag :search, params[:search], class: "form-control me-2", placeholder: "Search", aria_label: "Search" %>
         <button class="btn btn-outline-warning" type="submit">Search</button>
-      </form>
+      <% end %>
+    </div>
   </div>
 </nav>

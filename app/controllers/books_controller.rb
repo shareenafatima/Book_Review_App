@@ -3,12 +3,14 @@ class BooksController < ApplicationController
   before_action :authenticate_user!, except: %i[index show]
   # GET /books or /books.json
   def index
-if params[:category].blank?
-    @books = Book.all.order("created_at desc")
-else
-  @category_id = Category.find_by(name: params[:category])
-  @books = Book.where(:category_id => @category_id).order("created_at desc")
-end
+    if params[:category].blank? && params[:search].blank?
+      @books = Book.all.order("created_at desc")
+    elsif params[:category].present?
+      @category_id = Category.find_by(name: params[:category])
+      @books = Book.where(category_id: @category_id).order("created_at desc")
+    elsif params[:search].present?
+      @books = Book.where("title LIKE ? OR category LIKE ? OR author LIKE ?", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%")
+    end
   end
 
 

@@ -1,14 +1,34 @@
 
 <div class="container pt-5">
-  <h1>User Profile: <%= @user.email %></h1>
+  <h1>Your Profile: <%= @user.email %></h1>
 
-  <h2>Books</h2>
-  <% @books.each do |book| %>
-    <%= link_to book.title, book_path(book) %><br>
-  <% end %>
+ <% if current_user.books.count.zero? %>
+  <div class="message">You haven't added any books yet.</div>
+<% else %>
+  <h2 class = "heading1">Books</h2>
+  <div id="user-books">
+    <% current_user.books.each do |book| %>
+      <div class="book">
+        <%= link_to book_path(book) do %>
+          <%= image_tag book.image, class: "book-image" if book.image.attached? %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
 
-  <h2>Reviews</h2>
-  <% @reviews.each do |review| %>
-    <%= render partial: 'reviews/review', locals: { review: review } %>
+
+<% if current_user.reviews.count.zero? %>
+  <div class="message">You haven't written any reviews yet.</div>
+<% else %>
+  <h2 class="heading1">Reviews</h2>
+  <% current_user.reviews.each do |review| %>
+    <div class="review-container">
+      <p class="book-name"><strong>Book: <%= review.book.title %></strong></p>
+      <%= render partial: 'reviews/review', locals: { review: review } %>
+    </div>
   <% end %>
+<% end %>
+
+
 </div>

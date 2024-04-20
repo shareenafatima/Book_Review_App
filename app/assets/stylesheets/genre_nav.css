@@ -171,3 +171,33 @@ background: #ffb703;
   .book-description {
     width: 100%;
   } */
+
+  #user-books {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .book {
+    /* flex: 0 0 calc(33.33% - 20px);  */
+    margin-bottom: 20px;
+  }
+  
+  .book-image {
+    width: 100%; 
+    height: auto; 
+  }
+
+  .review-container {
+    margin-bottom: 20px; 
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .book-name {
+    font-family: monospace;
+    font-size: 30px;
+    color: blue;
+  }
+  
+  
