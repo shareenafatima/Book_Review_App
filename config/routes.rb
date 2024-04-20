@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   devise_for :users, controller: {
     registrations: 'registrations'
   }
+
+  get 'users/show'
+  resources :users, only: [:show]
+
   get 'home/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

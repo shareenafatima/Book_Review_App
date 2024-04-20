@@ -10,6 +10,11 @@
          <%= link_to "Home",root_path,class: "btn btn-outline-dark" %>
           <a  href="#"></a>
         </li>
+
+      <li class="nav-item">
+        <%= link_to "User Profile", user_path(current_user), class: "nav-link" if current_user %>
+      </li>
+      
         </ul>
       <%= render 'users/session_manager' %>
      
