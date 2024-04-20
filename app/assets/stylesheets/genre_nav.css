@@ -233,3 +233,51 @@ background: #ffb703;
     font-size: 36px;
     margin-left: 50px;
   }
+
+  .container-2 {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .form-container {
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-title {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .form-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .field label {
+    font-weight: bold;
+  }
+  
+  .input, .select, .text_area {
+    width: 100%;
+  }
+  
+  .field.file_field {
+    margin-top: 20px;
+  }
+  
+  .form-actions {
+    text-align: center;
+    margin-top: 20px;
+    background: #FFA500;
+    border: 2px solid black;
+  }
+  

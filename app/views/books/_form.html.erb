@@ -1,25 +1,26 @@
+<div class="container-2">
+  <div class="form-container">
+    <%= simple_form_for(@book) do |f| %>
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-<%= simple_form_for(@book) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+      <h2 class="form-title">Add New Book</h2>
 
-  <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :description %>
-    <%= f.input :author %>
-    <%= f.input :publication_year %>
-    <div class="field">
-    <%= f.label :category_id, class:"title" %>
-    <%= f.select :category_id, Category.all.map { |c| [c.name, c.id] }, prompt: "Select category" %>
-  </div>
-  </div>
+      <div class="form-inputs">
+        <%= f.input :title %>
+        <%= f.input :description, as: :text, input_html: { rows: 5 } %>
+        <%= f.input :author %>
+        <%= f.input :publication_year %>
+        <div class="field">
+          <%= f.label :category_id, class:"title" %>
+          <%= f.select :category_id, Category.all.map { |c| [c.name, c.id] }, prompt: "Select category" %>
+        </div>
+        <%= f.input :image, as: :file %>
+      </div>
 
-<div class="field">
-    <%= f.label :image %>
-    <%= f.file_field :image %>
+      <div class="form-actions">
+        <%= f.button :submit %>
+      </div>
+    <% end %>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+</div>
