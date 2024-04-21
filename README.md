@@ -27,4 +27,4 @@ The User Profile Management feature provides users with a dedicated section wher
 <h6> Manage Books:</h6> Users can also manage the books they have added to the app using their email address. This includes viewing, editing, or removing books from their profile.
 <h4> Navigation: <h4>
 <li> Intuitive navigation with a user-friendly interface for easy browsing and interaction.</li>
-</li> Responsive design ensures a seamless experience across different devices and screen sizes.</li>
+<li> Responsive design ensures a seamless experience across different devices and screen sizes.</li>
