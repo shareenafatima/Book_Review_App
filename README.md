@@ -1,24 +1,3 @@
-# README
+#Book Review App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The Book Review App is a web application designed to facilitate the review and discussion of books. It provides a platform for users to share their opinions on books they have read, discover new books, and engage with other readers. 
