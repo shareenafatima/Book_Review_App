@@ -5,4 +5,4 @@ The Book Review App is a web application designed to facilitate the review and d
 <h2> Features <h2>
 <h4> User Authentication: </h4>
 <li> User registration and login system to manage user accounts securely.</li>
-</li> Authentication features provided by Devise gem for user management.</li>
+<li> Authentication features provided by Devise gem for user management.</li>
