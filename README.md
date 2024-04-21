@@ -19,3 +19,9 @@ The Book Review App is a web application designed to facilitate the review and d
 <h4> Account Management:</h4>
 <li> Users have access to their account settings, where they can update their profile information, change passwords, and manage account preferences.</li>
 <li> Account deletion functionality allows users to delete their accounts if desired.</li>
+<h4> User Profile Management:</h4>
+The User Profile Management feature provides users with a dedicated section where they can access and manage all their reviews and books added using their email address. This section serves as a centralized hub for users to conveniently view, edit, and delete their contributed content, ensuring seamless control over their activities within the Book Review App. Users can access their profile by clicking on the "Profile" button, where they can perform the following actions:
+1. <h6> View Reviews:</h6> Users can see a comprehensive list of all the reviews they have submitted, along with details such as book title, rating, and comments.
+2. <h6> Edit Reviews:</h6> Users have the option to edit their existing reviews, allowing them to make updates or revisions as needed.
+3. <h6> Delete Reviews:</h6> Users can delete any reviews they no longer wish to have displayed on the platform, giving them full control over their content.
+4. <h6> Manage Books:</h6> Users can also manage the books they have added to the app using their email address. This includes viewing, editing, or removing books from their profile.
