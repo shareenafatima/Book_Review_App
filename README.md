@@ -34,3 +34,7 @@ The User Profile Management feature provides users with a dedicated section wher
 <h4> Security and Privacy:</h4>
 <li> Implementation of security measures such as encryption and secure authentication to protect user data.</li>
 <li> Privacy settings to control the visibility of user profiles and reviews.</li>
+
+<h2> Enhancement<h2> 
+<h4> Introducing Like and Comment Feature for Reviews:</h4>
+Adding a Like and Comment feature to reviews can significantly enhance user engagement and interaction within the Book Review App. This feature allows users to express their opinions on reviews submitted by others, fostering a sense of community and collaboration among users.
