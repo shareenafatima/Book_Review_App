@@ -10,3 +10,7 @@ The Book Review App is a web application designed to facilitate the review and d
 <li> Users can view a list of books available in the app.</li>
 <li> Each book is displayed with its title, author, publication year, category, and description.</li>
 <li> Books are categorized for easy navigation and discovery.</li>
+<h4> Review System:</h4>
+<li> Users can write reviews for books they have read.</li>
+<li> Reviews include a rating system (e.g., star ratings) and comments where users can share their thoughts and opinions.</li>
+<li> Reviews are displayed along with book details to help users make informed decisions about what to read.</li>
