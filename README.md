@@ -14,3 +14,8 @@ The Book Review App is a web application designed to facilitate the review and d
 <li> Users can write reviews for books they have read.</li>
 <li> Reviews include a rating system (e.g., star ratings) and comments where users can share their thoughts and opinions.</li>
 <li> Reviews are displayed along with book details to help users make informed decisions about what to read.</li>
+<h4> Interaction Features:</h4>
+<li> Comments on reviews enable users to engage in discussions and share their perspectives.</li>
+<h4> Account Management:</h4>
+<li> Users have access to their account settings, where they can update their profile information, change passwords, and manage account preferences.</li>
+<li> Account deletion functionality allows users to delete their accounts if desired.</li>
