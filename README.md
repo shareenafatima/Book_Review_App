@@ -25,6 +25,9 @@ The User Profile Management feature provides users with a dedicated section wher
 <h6> Edit Reviews:</h6> Users have the option to edit their existing reviews, allowing them to make updates or revisions as needed.
 <h6> Delete Reviews:</h6> Users can delete any reviews they no longer wish to have displayed on the platform, giving them full control over their content.
 <h6> Manage Books:</h6> Users can also manage the books they have added to the app using their email address. This includes viewing, editing, or removing books from their profile.
-<h4> Navigation: <h4>
+<h4> Navigation: </h4>
 <li> Intuitive navigation with a user-friendly interface for easy browsing and interaction.</li>
 <li> Responsive design ensures a seamless experience across different devices and screen sizes.</li>
+<h4> Search and Filtering:</h4>
+<li> Search functionality allows users to search for books by title, author, or category.</li>
+<li> Filtering options enable users to refine their search results based on genre.</li>
