@@ -40,3 +40,5 @@ The User Profile Management feature provides users with a dedicated section wher
 Adding a Like and Comment feature to reviews can significantly enhance user engagement and interaction within the Book Review App. This feature allows users to express their opinions on reviews submitted by others, fostering a sense of community and collaboration among users.
 <h4> Integration with E-Commerce Features:</h4>
 Integrating e-commerce features into the Book Review App can broaden its functionality and provide users with a seamless experience for discovering and purchasing books they are interested in. The "Want to Buy" feature introduces essential e-commerce elements such as adding books to a cart and selecting payment methods. 
+<h4> Enable Social Sharing to Share Books Across Platforms</h4>
+Adding a "Share" option to the Book Review App allows users to share their favorite books with friends, family, or followers across various social media platforms and communication channels. This feature enhances user engagement and promotes book discovery through word-of-mouth recommendations.
