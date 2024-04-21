@@ -31,3 +31,6 @@ The User Profile Management feature provides users with a dedicated section wher
 <h4> Search and Filtering:</h4>
 <li> Search functionality allows users to search for books by title, author, or category.</li>
 <li> Filtering options enable users to refine their search results based on genre.</li>
+<h4> Security and Privacy:</h4>
+<li> Implementation of security measures such as encryption and secure authentication to protect user data.</li>
+<li> Privacy settings to control the visibility of user profiles and reviews.</li>
