@@ -33,9 +33,8 @@ class ReviewsController < ApplicationController
     @review = Review.find(params[:id])
     @book = @review.book
     @review.destroy
-    redirect_to book_path(@book)
+    redirect_to book_path(@book), notice: 'Review was successfully deleted.'
   end
-
 
 
   private
