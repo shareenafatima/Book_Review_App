@@ -7,10 +7,10 @@
     </div>
 
     <div class="form-group">
-    
       <%= f.input :comment, class: "form-control", as: :text, input_html: { rows: 5 } %>
     </div>
 
     <%= f.button :submit, class: "black-button-2" %>
+    <%= link_to 'Delete', book_review_path(@book, @review), method: :delete, class: 'black-button-2' %>
   <% end %>
 </div>

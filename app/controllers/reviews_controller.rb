@@ -6,6 +6,9 @@ class ReviewsController < ApplicationController
     @review = Review.new
   end
 
+ def show
+ end
+
   def create
     @review = Review.new(review_params)
     @review.book_id = @book.id
@@ -19,6 +22,8 @@ class ReviewsController < ApplicationController
   end
 
   def edit
+    @review = Review.find(params[:id])
+    render 'edit'
   end
 
   def update
@@ -30,10 +35,16 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
-    @review = Review.find(params[:id])
     @book = @review.book
-    @review.destroy
-    redirect_to book_path(@book), notice: 'Review was successfully deleted.'
+
+    # Delete the review
+    if @review.destroy
+      # Delete all reviews associated with the book
+      @book.reviews.destroy_all
+      redirect_to book_path(@book), notice: "Review and associated reviews were successfully deleted."
+    else
+      redirect_to book_path(@book), alert: "Failed to delete review and associated reviews."
+    end
   end
 
 
